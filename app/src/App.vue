@@ -1,22 +1,29 @@
 <template>
   <div id="app">
-    <HelloWorld dialogue="HI  EVERY  !
+    <Spamton dialogue="pain
     "/>
+    <Shop />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/Spamton.vue'
+import Spamton from './components/Spamton.vue'
+import Shop from './components/Store.vue'
 
 export default {
   name: 'App',
   components: {
-    Spamton
+    Spamton,
+    Shop
   }
 }
 </script>
 
 <style>
+html,body {
+    background-color:black;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -24,5 +31,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  display:flex;
 }
 </style>
