@@ -5,7 +5,7 @@
       <img src="../assets/spamton.png" alt="" class=spammy>
     </div>
     <div class="dialogue-box">
-      <p class="dialogue-text"> {{dialogue}}</p>
+      <p class="dialogue-text"> {{intro}}</p>
     </div>
     <div class="  "></div>
   </div>
@@ -16,8 +16,19 @@
   name: 'Spamton',
   props: {
     dialogue: String
-  }
+  },
+  data() {
+ return {
+   noKromer: "what?! you have [[no kromer]]? then just give your [[heartshapedobject]] instead!",
+   intro: "it's everyone's favorite [[numberonesalesman1997]],",
+   nameDrop: "Spamton G. Spamton!!!!!",
+   deal: "I've got a [[specil deal]] for you!",
+
+ }
 }
+
+ }
+
 </script>
 
 <style>
