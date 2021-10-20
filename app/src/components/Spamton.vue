@@ -44,7 +44,6 @@
 .dialogue-box {
   background: black;
   color: white;
-  width: 70%;
   margin: 1rem auto;
   padding: 2rem;
   font-size: 1.5rem;

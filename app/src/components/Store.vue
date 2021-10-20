@@ -1,7 +1,17 @@
 <template>
-  <div >
-      <div class="shop kromer">  </div>
-      <li>this is a shop</li>
+  <div class="money">
+    <div class="shop kromer"> 
+        <p>kromr</p>
+         </div>
+      <div class="shop things"> 
+        
+        <select class="listy" v-model="items" multiple>
+          <option v-for="item in items" :key="item" v-bind:value="item.itemId">{{ item.itemName }}</option>
+        </select>
+         </div>
+      
+            
+      
   </div>
 </template>
 
@@ -10,10 +20,18 @@
   name: 'Shop',
    data() {
  return {
-   item1: "item 1",
-   item2: "item 2",
-   item3: "item 3",
-   item4: "item 4",
+   items: [
+        {itemId: 1,
+        itemName: "hello"},
+        {itemId: 2,
+        itemName:"crying and crumbling" },
+        {itemId: 3,
+        itemName: "groaning and grumbling"},
+        {itemId: 4,
+        itemName: "AAAAAAAAAAAAAAAAAAAAAAAA"},
+        
+   ]
+
 
  }
 }
@@ -21,10 +39,14 @@
 </script>
 
 <style>
+
+.money {
+  margin: 2rem;
+}
+
 .shop {
   background: black;
   color: white;
-  width: 30%;
   margin: 1rem auto;
   padding: 2rem;
   font-size: 1.5rem;
@@ -32,6 +54,18 @@
   border-style: solid;
   border-color: white;
   
+}
+
+.kromer {
+  width: 70%;
+}
+
+.listy {
+  background-color: black;
+  color: white;
+  border:none;
+  font-size: 1.5rem;
+  text-transform:uppercase;
 }
 
 </style>
