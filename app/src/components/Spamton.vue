@@ -7,7 +7,6 @@
     <div class="dialogue-box">
       <p class="dialogue-text"> {{intro}}</p>
     </div>
-    <div class="  "></div>
   </div>
 </template>
 
@@ -20,9 +19,9 @@
   data() {
  return {
    noKromer: "what?! you have [[no kromer]]? then just give your [[heartshapedobject]] instead!",
-   intro: "it's everyone's favorite [[numberonesalesman1997]],",
-   nameDrop: "Spamton G. Spamton!!!!!",
+   intro: "it's everyone's favorite [[numberonesalesman1997]], Spamton G. Spamton!!!!!",
    deal: "I've got a [[specil deal]] for you!",
+   talk: "why be the [[little sponge]] who hates its [[$4.99]] life",
 
  }
 }

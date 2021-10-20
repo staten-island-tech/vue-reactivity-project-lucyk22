@@ -1,13 +1,16 @@
 <template>
   <div class="money">
     <div class="shop kromer"> 
-        <p>kromr</p>
+        <btn class="buy catalog">shop</btn>
+        <btn class="buy talk">talk</btn>
+        <btn class="buy bye">bye</btn>
          </div>
       <div class="shop things"> 
         
-        <select class="listy" v-model="items" multiple>
-          <option v-for="item in items" :key="item" v-bind:value="item.itemId">{{ item.itemName }}</option>
+        <select class="listy" v-model="selected" multiple>
+          <option class="options" v-for="item in items" :key="item" v-bind:value="item.dialogue">{{ item.itemName }}</option>
         </select>
+        <span>{{ selected }} </span>
          </div>
       
             
@@ -20,15 +23,16 @@
   name: 'Shop',
    data() {
  return {
+   selected: '',
    items: [
         {itemId: 1,
-        itemName: "hello"},
+        itemName: "keygen", dialogue: "TRANSMIT [x] KROMER?"},
         {itemId: 2,
-        itemName:"crying and crumbling" },
+        itemName:"s. potion", dialogue: "LET'S MAKE A DEAL." },
         {itemId: 3,
-        itemName: "groaning and grumbling"},
+        itemName: "the big one", dialogue: "DON'T FORGET TO [Like and Subscribe] FOR MORE [Hyperlink Blocked]!s"},
         {itemId: 4,
-        itemName: "AAAAAAAAAAAAAAAAAAAAAAAA"},
+        itemName: "bshot bowtie", dialogue: "DELICIOUS KROMER"},
         
    ]
 
@@ -40,8 +44,24 @@
 
 <style>
 
+.buy {
+  border:white;
+  border:solid;
+  padding: .5rem;
+  transition: all .2s;
+  margin:.1rem;
+  width: 20%;
+}
+
+.buy:hover {
+  color: yellow;
+}
+
+
+
 .money {
   margin: 2rem;
+
 }
 
 .shop {
@@ -58,6 +78,15 @@
 
 .kromer {
   width: 70%;
+}
+
+.options {
+  margin-top: 1rem;
+
+}
+
+.options:hover {
+  color:yellow;
 }
 
 .listy {
