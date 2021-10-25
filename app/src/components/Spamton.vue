@@ -5,7 +5,7 @@
       <img src="../assets/spamton.png" alt="" class=spammy>
     </div>
     <div class="dialogue-box">
-      <p class="dialogue-text"> {{intro}}</p>
+      <p id="talkText" class="dialogue-text"> {{talkText[Math.floor(Math.random() * 4)].text}}</p>
     </div>
   </div>
 </template>
@@ -18,13 +18,23 @@
   },
   data() {
  return {
-   noKromer: "what?! you have [[no kromer]]? then just give your [[heartshapedobject]] instead!",
-   intro: "it's everyone's favorite [[numberonesalesman1997]], Spamton G. Spamton!!!!!",
-   deal: "I've got a [[specil deal]] for you!",
-   talk: "why be the [[little sponge]] who hates its [[$4.99]] life",
+   talkText: [
+     {text: "what?! you have [[no kromer]]? then just give your [[heartshapedobject]] instead!"},
+     {text:"it's everyone's favorite [[numberonesalesman1997]], Spamton G. Spamton!!!!!"},
+     {text:"I've got a [[specil deal]] for you!"},
+     {text:"why be the [[little sponge]] who hates its [[$4.99]] life"},
+   ]
 
  }
-}
+},
+
+methods: {
+  advText: function () {
+    const tText = document.getElementById("talkText");
+    console.log(tText);
+
+  }
+},
 
  }
 

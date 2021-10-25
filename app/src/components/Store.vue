@@ -1,9 +1,9 @@
 <template>
   <div class="money">
     <div class="shop kromer"> 
-        <btn class="buy catalog">shop</btn>
-        <btn class="buy talk">talk</btn>
-        <btn class="buy bye">bye</btn>
+        <button class="buy catalog">shop</button>
+        <button class="buy talk">talk</button>
+        <button class="buy bye">bye</button>
          </div>
       <div class="shop things"> 
         
@@ -45,6 +45,8 @@
 <style>
 
 .buy {
+  background: black;
+  color:white;
   border:white;
   border:solid;
   padding: .5rem;
