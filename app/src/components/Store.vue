@@ -48,11 +48,10 @@
   background: black;
   color:white;
   border:white;
+  font-size: 1rem;
   border:solid;
   padding: .5rem;
-  transition: all .2s;
   margin:.1rem;
-  width: 20%;
 }
 
 .buy:hover {
@@ -70,7 +69,7 @@
   background: black;
   color: white;
   margin: 1rem auto;
-  padding: 2rem;
+  padding: 1rem;
   font-size: 1.5rem;
   text-transform:uppercase;
   border-style: solid;
