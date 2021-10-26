@@ -12,6 +12,13 @@
         </select>
         <span>{{ selected }} </span>
          </div>
+       <div class="shop things"> 
+        
+        <select class="listy" v-model="selected" multiple>
+          <option class="options" v-for="item in talk" :key="item" v-bind:value="item.dialogue">{{ talk.itemName }}</option>
+        </select>
+        <span>{{ selected }} </span>
+         </div>
       
             
       
@@ -32,8 +39,12 @@
         {itemId: 3,
         itemName: "the big one", dialogue: "DON'T FORGET TO [Like and Subscribe] FOR MORE [Hyperlink Blocked]!s"},
         {itemId: 4,
-        itemName: "bshot bowtie", dialogue: "DELICIOUS KROMER"},
-        
+        itemName: "bshot bowtie", dialogue: "DELICIOUS KROMER"},        
+   ],
+
+      talk: [
+        {id: 1,
+        itemName: "our deal", dialogue: "TRANSMIT [x] KROMER?"},      
    ]
 
 
