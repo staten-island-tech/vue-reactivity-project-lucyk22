@@ -1,24 +1,30 @@
 <template>
   <div class="money">
-    <div class="shop kromer"> 
-        <button class="buy catalog">shop</button>
-        <button class="buy talk">talk</button>
-        <button class="buy bye">bye</button>
-         </div>
+
+
+
       <div class="shop things"> 
+
+
         
         <select class="listy" v-model="selected" multiple>
           <option class="options" v-for="item in items" :key="item" v-bind:value="item.dialogue">{{ item.itemName }}</option>
         </select>
-        <span>{{ selected }} </span>
-         </div>
-       <div class="shop things"> 
         
-        <select class="listy" v-model="selected" multiple>
-          <option class="options" v-for="item in talk" :key="item" v-bind:value="item.dialogue">{{ talk.itemName }}</option>
-        </select>
-        <span>{{ selected }} </span>
-         </div>
+                <span class="dialogue">{{ selected }} </span>
+
+        <div class="buttons">
+          <button v-on:click="walletValue - 100" class="buy">buy</button>
+          <span class="cost">- D$300</span>
+        </div>
+
+      </div>
+
+      <div class="shop kromer"> 
+        <span class="wallet">D${{ walletValue }}</span>
+        
+      </div>
+
       
             
       
@@ -31,6 +37,7 @@
    data() {
  return {
    selected: '',
+   walletValue: 5000,
    items: [
         {itemId: 1,
         itemName: "keygen", dialogue: "TRANSMIT [x] KROMER?"},
@@ -42,14 +49,15 @@
         itemName: "bshot bowtie", dialogue: "DELICIOUS KROMER"},        
    ],
 
-      talk: [
-        {id: 1,
-        itemName: "our deal", dialogue: "TRANSMIT [x] KROMER?"},      
-   ]
-
-
  }
-}
+},
+
+
+  methods: {
+    purchase: function() {
+      
+    }
+  },
 }
 </script>
 
@@ -62,7 +70,7 @@
   font-size: 1rem;
   border:solid;
   padding: .5rem;
-  margin:.1rem;
+  margin:.5rem;
 }
 
 .buy:hover {
@@ -107,6 +115,7 @@
   border:none;
   font-size: 1.5rem;
   text-transform:uppercase;
+  
 }
 
 </style>

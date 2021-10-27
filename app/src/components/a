@@ -66,3 +66,11 @@
 <ul class="listy">
   <li v-for="item in items" :key="item">{{ item.itemName }}</li>
 </ul>
+
+<div class="shop things">
+
+  <select class="listy" v-model="talkSelected" multiple>
+    <option class="options" v-for="talk in talk" :key="talk" v-bind:value="talk.dialogue">{{ talk.itemName }}</option>
+  </select>
+  <span>{{ talkSelected }} </span>
+</div>
