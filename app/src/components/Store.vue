@@ -8,14 +8,14 @@
 
         
         <select class="listy" v-model="selected" multiple>
-          <option class="options" v-for="item in items" :key="item" v-bind:value="item.dialogue">{{ item.itemName }}</option>
+          <option class="options" v-for="item in items" :key="item" v-bind:value="item">{{ item.itemName }}</option>
         </select>
         
-                <span class="dialogue">{{ selected }} </span>
+                <span class="dialogue">{{ selected[0].dialogue }} </span>
 
         <div class="buttons">
-          <button v-on:click="walletValue - 100" class="buy">buy</button>
-          <span class="cost">- D$300</span>
+          <button v-on:click="purchase" class="buy">buy</button>
+          <span class="cost"> -D${{selected[0].itemCost}}</span>
         </div>
 
       </div>
@@ -36,16 +36,20 @@
   name: 'Shop',
    data() {
  return {
-   selected: '',
+   selected: [
+     {itemCost: "0",
+     dialogue: "",}
+   ],
    walletValue: 5000,
    items: [
-        {itemId: 1,
+        {itemCost: 49030
+        ,
         itemName: "keygen", dialogue: "TRANSMIT [x] KROMER?"},
-        {itemId: 2,
+        {itemCost: 150,
         itemName:"s. potion", dialogue: "LET'S MAKE A DEAL." },
-        {itemId: 3,
+        {itemCost: 150,
         itemName: "the big one", dialogue: "DON'T FORGET TO [Like and Subscribe] FOR MORE [Hyperlink Blocked]!s"},
-        {itemId: 4,
+        {itemCost: 150,
         itemName: "bshot bowtie", dialogue: "DELICIOUS KROMER"},        
    ],
 
@@ -55,7 +59,17 @@
 
   methods: {
     purchase: function() {
+      //walletValue -= {{selected[0].itemcost}};
+
+      /*for (;;) {
+        function ohno () {
+        alert("WHERE'S YOUR KROMER");
+        alert("WAKE UP AND TASTE THE PAIN");
+        }
       
+      }*/
+
+
     }
   },
 }
@@ -93,7 +107,11 @@
   text-transform:uppercase;
   border-style: solid;
   border-color: white;
-  
+
+}
+
+.options {
+    overflow: hidden;
 }
 
 .kromer {

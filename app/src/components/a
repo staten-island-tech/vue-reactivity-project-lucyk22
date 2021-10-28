@@ -74,3 +74,8 @@
   </select>
   <span>{{ talkSelected }} </span>
 </div>
+
+what to do
+- select thing
+- buy thing if money good
+- add thing inventory
