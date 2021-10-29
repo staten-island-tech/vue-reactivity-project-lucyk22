@@ -6,7 +6,6 @@
     </div>
     <div class="dialogue-box" v-on:click="advText">
       <p id="talkText" class="dialogue-text"> {{talkText[Math.floor(Math.random() * 4)].text}}</p>
-      <img class="arrow" v-bind:src="Arrow" alt="arroq">
     </div>
   </div>
 </template>
@@ -25,7 +24,6 @@
      {text:"I've got a [[specil deal]] for you!"},
      {text:"why be the [[little sponge]] who hates its [[$4.99]] life"},
    ],
-    Arrow: "https://pngimg.com/uploads/red_arrow/red_arrow_PNG1.png"
 
  }
 },
@@ -72,7 +70,4 @@ methods: {
   
 }
 
-.arrow {
-  width: 4rem;
-}
 </style>

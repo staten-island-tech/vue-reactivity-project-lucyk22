@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <Spamton dialogue="pain
-    "/>
+    <Spamton/>
     <Shop />
   </div>
 </template>
