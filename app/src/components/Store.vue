@@ -24,8 +24,6 @@
         <span class="wallet">D${{ walletValue }}</span>
         
       </div>
- 
- 
             
       
   </div>
@@ -65,14 +63,15 @@
     },
     debt: function() {
       //walletValue -= {{selected[0].itemcost}};
-
+    setTimeout(function delay(){
       while (this.walletValue < 0) {
         alert("WHERE'S YOUR KROMER");
         alert("WAKE UP AND TASTE THE PAIN");
         alert("You have been gifted 500 kromer by [[BIG SIMP]]");
         this.walletValue += 500;
 
-      }
+      }},300);
+  
 
 
     }
@@ -127,6 +126,8 @@
 
 .options {
   margin-top: 1rem;
+  border-style: solid;
+  border-color: white;
 
 }
 
