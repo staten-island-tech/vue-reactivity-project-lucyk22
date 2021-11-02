@@ -51,6 +51,7 @@ methods: {
   display:flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;
 }
 
 .spammy {
