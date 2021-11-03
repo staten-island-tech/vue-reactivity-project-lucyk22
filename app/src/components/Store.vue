@@ -24,6 +24,17 @@
         <span class="wallet">D${{ walletValue }}</span>
         
       </div>
+
+      <div class="shop">
+        <h4 class="inventory-title">INVENTORY</h4>
+        <div class="inventory">
+          <li class= "inventory-list" v-for="item in inventoryItems" :key=item>
+          {{item}}
+        </li>
+        </div>
+
+
+      </div>
             
       
   </div>
@@ -53,6 +64,8 @@
         {itemID: 4, itemCost: Math.floor(Math.random() * 150),
         itemName: "bshot bowtie", dialogue: "DELICIOUS KROMER"},        
    ],
+   inventoryItems: [
+   ],
 
  }
 },
@@ -61,6 +74,7 @@
   methods: {
     purchase: function() {
       this.walletValue -= this.selected[0].itemCost;
+      this.inventoryItems.push(this.selected[0].itemName);
     },
     debt: function() {
       //walletValue -= {{selected[0].itemcost}};
@@ -148,6 +162,32 @@
   font-size: 1.5rem;
   text-transform:uppercase;
   
+}
+
+.inventory {
+  height:10rem;
+  overflow: scroll hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+
+}
+.inventory-list {
+  display: flex;
+  flex-direction: row;
+  padding: none;
+  margin-right: 1.5rem;
+  overflow-wrap: normal;
+}
+
+::-webkit-scrollbar {
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+
 }
 
 </style>

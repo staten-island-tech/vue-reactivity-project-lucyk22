@@ -11,6 +11,9 @@ import Shop from './components/Store.vue'
 
 export default {
   name: 'App',
+  props: {
+    
+  },
   components: {
     Spamton,
     Shop

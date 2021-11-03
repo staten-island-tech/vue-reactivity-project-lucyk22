@@ -13,9 +13,6 @@
 <script>
  export default {
   name: 'Spamton',
-  props: {
-
-  },
   data() {
  return {
    tText: "Hi",
