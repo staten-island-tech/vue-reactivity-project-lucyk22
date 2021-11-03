@@ -8,7 +8,7 @@
 
         
         <select class="listy" v-model="selected" multiple>
-          <option class="options" v-for="item in items" :key="item.itemName" v-bind:value="item">{{ item.itemName }}</option>
+          <option class="options" v-for="item in items" :key="item.itemID" v-bind:value="item">{{ item.itemName }}</option>
         </select>
         
                 <span class="dialogue">{{ selected[0].dialogue }} </span>
@@ -42,14 +42,15 @@
 
    walletValue: 5000,
    items: [
-        {itemCost: Math.floor(Math.random() * 49030)
+        {itemID: 1,
+        itemCost: Math.floor(Math.random() * 49030)
         ,
         itemName: "keygen", dialogue: "TRANSMIT [x] KROMER?"},
-        {itemCost: Math.floor(Math.random() * 150),
+        {itemID: 2, itemCost: Math.floor(Math.random() * 150),
         itemName:"s. potion", dialogue: "LET'S MAKE A DEAL." },
-        {itemCost: Math.floor(Math.random() * 150),
+        {iitemID: 3, itemCost: Math.floor(Math.random() * 150),
         itemName: "the big one", dialogue: "DON'T FORGET TO [Like and Subscribe] FOR MORE [Hyperlink Blocked]!s"},
-        {itemCost: Math.floor(Math.random() * 150),
+        {itemID: 4, itemCost: Math.floor(Math.random() * 150),
         itemName: "bshot bowtie", dialogue: "DELICIOUS KROMER"},        
    ],
 
@@ -63,14 +64,16 @@
     },
     debt: function() {
       //walletValue -= {{selected[0].itemcost}};
-    setTimeout(function delay(){
       while (this.walletValue < 0) {
+        setTimeout(() => {
         alert("WHERE'S YOUR KROMER");
         alert("WAKE UP AND TASTE THE PAIN");
         alert("You have been gifted 500 kromer by [[BIG SIMP]]");
         this.walletValue += 500;
+        
 
-      }},300);
+          },300);
+      }
   
 
 
@@ -91,6 +94,7 @@
   border:solid;
   padding: .5rem;
   margin:.5rem;
+
 }
 
 .buy:hover {
@@ -101,7 +105,7 @@
 
 .money {
   margin: 2rem;
-
+  width: 40%;
 }
 
 .shop {
@@ -113,11 +117,15 @@
   text-transform:uppercase;
   border-style: solid;
   border-color: white;
+  display: flex;
+  flex-direction: column;
+
 
 }
 
-.options {
-    overflow: hidden;
+.dialogue {
+  margin: 1rem;
+  width: 90%;
 }
 
 .kromer {
@@ -125,9 +133,11 @@
 }
 
 .options {
-  margin-top: 1rem;
+  margin: 1rem;
   border-style: solid;
   border-color: white;
+  width: 80%;
+      overflow: hidden;
 
 }
 

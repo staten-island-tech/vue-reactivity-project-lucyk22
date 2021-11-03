@@ -5,7 +5,7 @@
       <img src="../assets/spamton.png" alt="" class=spammy>
     </div>
     <div class="dialogue-box" v-on:click="advText">
-      <p id="talkText" class="dialogue-text"> {{talkText[Math.floor(Math.random() * 4)].text}}</p>
+      <p id="talkText" class="dialogue-text"> {{tText}}</p>
     </div>
   </div>
 </template>
@@ -14,10 +14,11 @@
  export default {
   name: 'Spamton',
   props: {
-    dialogue: String
+
   },
   data() {
  return {
+   tText: "Hi",
    talkText: [
      {text: "what?! you have [[no kromer]]? then just give your [[heartshapedobject]] instead!"},
      {text:"it's everyone's favorite [[numberonesalesman1997]], Spamton G. Spamton!!!!!"},
@@ -30,14 +31,8 @@
 
 methods: {
   advText: function () {
-    const tText = document.getElementById("talkText");
-    const talkText = [
-     {text: "what?! you have [[no kromer]]? then just give your [[heartshapedobject]] instead!"},
-     {text:"it's everyone's favorite [[numberonesalesman1997]], Spamton G. Spamton!!!!!"},
-     {text:"I've got a [[specil deal]] for you!"},
-     {text:"why be the [[little sponge]] who hates its [[$4.99]] life"} ]
 
-    tText.innerText = talkText[Math.floor(Math.random() * 4)].text;
+    this.tText = this.talkText[Math.floor(Math.random() * 4)].text;
 
   }
 },
@@ -52,6 +47,7 @@ methods: {
   flex-direction: column;
   align-items: center;
   width: 50%;
+  margin: 1rem;
 }
 
 .spammy {
