@@ -1,7 +1,9 @@
 <template>
   <div class="money">
 
-
+      <div class="shop kromer"> 
+        <span class="wallet">D${{ walletValue }}</span>
+      </div>
 
       <div class="shop things"> 
 
@@ -20,10 +22,7 @@
 
       </div>
 
-      <div class="shop kromer"> 
-        <span class="wallet">D${{ walletValue }}</span>
-        
-      </div>
+      
 
       <div class="shop">
         <h4 class="inventory-title">INVENTORY</h4>
