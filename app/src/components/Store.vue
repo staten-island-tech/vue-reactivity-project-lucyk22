@@ -65,14 +65,10 @@
     debt: function() {
       //walletValue -= {{selected[0].itemcost}};
       while (this.walletValue < 0) {
-        setTimeout(() => {
         alert("WHERE'S YOUR KROMER");
         alert("WAKE UP AND TASTE THE PAIN");
-        alert("You have been gifted 500 kromer by [[BIG SIMP]]");
-        this.walletValue += 500;
-        
-
-          },300);
+        alert("You have been gifted 5000 kromer by [[BIG SIMP]]");
+        this.walletValue += 5000;
       }
   
 
